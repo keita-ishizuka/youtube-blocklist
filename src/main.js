@@ -9,6 +9,9 @@
 // @grant        none
 // ==/UserScript==
 
+const APP_NAME = "youtube-blocklist";
+const DB_NAME = `${APP_NAME}:blockChannelList`;
+
 (function () {
   "use strict";
 
@@ -22,5 +25,20 @@
         }
       }
     }
+  }
+
+  function fetchList() {
+    const channelList = localStorage.getItem(DB_NAME);
+    if (channelList === null) {
+      return [];
+    } else {
+      return channelList.split(",");
+    }
+  }
+
+  function appendToList(channel) {
+    const channelList = new Set(fetchList());
+    channelList.add(channel);
+    localStorage.setItem(DB_NAME, [...channelList].join(","));
   }
 })();

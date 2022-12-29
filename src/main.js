@@ -12,5 +12,15 @@
 (function () {
   "use strict";
 
-  // Your code here...
+  function block(blockChannelList) {
+    for (const blockChannel of blockChannelList) {
+      const query = `a[href="/@${blockChannel}"]`;
+      for (const blockVideo of document.querySelectorAll(query)) {
+        const target = blockVideo.parentElement.parentElement.parentElement;
+        if (target.id == "dismissible") {
+          target.remove();
+        }
+      }
+    }
+  }
 })();

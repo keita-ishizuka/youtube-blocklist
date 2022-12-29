@@ -15,6 +15,27 @@ const DB_NAME = `${APP_NAME}:blockChannelList`;
 (function () {
   "use strict";
 
+  setInterval(addButton, 500);
+
+  function test() {
+    alert("abc");
+  }
+
+  function addButton() {
+    const query =
+      "div.style-scope.ytd-video-renderer:not(.metadata-snippet-container) > a";
+    for (const channelThumbnail of document.querySelectorAll(query)) {
+      const channelInfo = channelThumbnail.parentNode;
+      if (channelInfo.querySelectorAll("button").length === 0) {
+        const channelName = channelThumbnail.href;
+        const blockButton = document.createElement("button");
+        blockButton.innerText = "block";
+        blockButton.addEventListener("click", test);
+        channelInfo.appendChild(blockButton);
+      }
+    }
+  }
+
   function block(blockChannelList) {
     for (const blockChannel of blockChannelList) {
       const query = `a[href="/@${blockChannel}"]`;

@@ -36,4 +36,9 @@ const DB_NAME = `${APP_NAME}:blockChannelList`;
     }
   }
 
+  function appendToList(channel) {
+    const channelList = new Set(fetchList());
+    channelList.add(channel);
+    localStorage.setItem(DB_NAME, [...channelList].join(","));
+  }
 })();

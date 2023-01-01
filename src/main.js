@@ -29,6 +29,7 @@ const DB_NAME = `${APP_NAME}:blockChannelList`;
         const channelName = channelThumbnail.href.split("@").pop();
         const blockButton = document.createElement("button");
         blockButton.innerText = "block";
+        blockButton.style.marginLeft = "0.7em";
         blockButton.addEventListener("click", () => appendToList(channelName));
         channelInfo.appendChild(blockButton);
       }

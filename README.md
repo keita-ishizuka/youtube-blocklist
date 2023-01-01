@@ -30,4 +30,4 @@ https://github.com/keita-ishizuka/youtube-blocklist/blob/main/src/main.js
 ## References
 
 We refer the reader to the following video to learn about Tampermonkey:
-Gttps://www.youtube.com/watch?v=8tyjJD65zws&t=2s
+https://www.youtube.com/watch?v=8tyjJD65zws&t=2s

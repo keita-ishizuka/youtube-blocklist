@@ -1,5 +1,7 @@
 # youtube-blocklist
 
+![demo](./demo.gif)
+
 ## Features
 
 This script adds a button next to each video thumbnail on YouTube.
@@ -27,5 +29,5 @@ https://github.com/keita-ishizuka/youtube-blocklist/blob/main/src/main.js
 
 ## References
 
-I recommend the following video to learn about Tampermonkey:
-https://www.youtube.com/watch?v=8tyjJD65zws&t=2s
+We refer the reader to the following video to learn about Tampermonkey:
+Gttps://www.youtube.com/watch?v=8tyjJD65zws&t=2s
